@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Koding - 3D Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <a href="#" class="logo">Kopi Koding</a>
+            <ul>
+                <li><a href="#hero" class="active">Beranda</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Hero dengan 3D Canvas -->
+        <section id="hero" class="hero">
+            <canvas id="bg-canvas"></canvas>
+            <div class="hero-content">
+                <h1>Kopi. Kode. Kreativitas.</h1>
+                <p>Kami menyajikan kopi luar biasa untuk para pemikir dan pencipta. Sesederhana itu.</p>
+                <a href="#menu" class="cta-button">Lihat Menu</a>
+            </div>
+        </section>
+
+        <!-- Section Menu -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2>Menu Andalan Kami</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/espresso.jpg" alt="Espresso">
+                        <h3>Espresso</h3>
+                        <p>Ekstraksi pekat dari biji kopi premium, menawarkan tendangan rasa yang kaya dan tak terlupakan.</p>
+                        <span class="price">Rp 18.000</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/caffe latte.jpg" alt="Caffe Latte">
+                        <h3>Caffè Latte</h3>
+                        <p>Harmoni lembut antara espresso kami yang kaya dan susu steam segar, menciptakan rasa klasik yang menenangkan.</p>
+                        <span class="price">Rp 25.000</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/cappucinno.jpg" alt="Cappuccino">
+                        <h3>Cappuccino</h3>
+                        <p>Keseimbangan sempurna dari espresso, susu hangat, dan lapisan busa susu tebal yang memanjakan.</p>
+                        <span class="price">Rp 25.000</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/croissant.jpg" alt="Croissant">
+                        <h3>Butter Croissant</h3>
+                        <p>Lapisan pastry keemasan yang renyah di luar dan lembut di dalam. Aroma mentega aslinya adalah pasangan sempurna kopimu.</p>
+                        <span class="price">Rp 22.000</span>
+                    </div>
+                     <div class="menu-item">
+                        <img src="images/cookies.jpg" alt="Cookies">
+                        <h3>Cookies ChocoChip</h3>
+                        <p>Kue klasik yang renyah di tepi dan lembut di tengah, bertabur kepingan cokelat premium yang meleleh di mulut.</p>
+                        <span class="price">Rp 15.000</span>
+                    </div>
+                     <div class="menu-item">
+                        <img src="images/macaron.jpg" alt="Macaron">
+                        <h3>Sweet Macaron</h3>
+                        <p>Kue mungil dari Prancis dengan cangkang renyah dan isian krim lembut yang lumer di lidah. Manis dan elegan.</p>
+                        <span class="price">Rp 15.000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Tentang -->
+         <section id="tentang" class="tentang-section">
+            <div class="container tentang-content">
+                <div class="tentang-image">
+                    <img src="images/interior.jpg" alt="Suasana Kopi Koding">
+                </div>
+                <div class="tentang-text">
+                    <h2>Misi Kami Bahan Bakar Ide Anda</h2>
+                    <p>Kami percaya dunia dibangun oleh para pemikir, pemimpi, dan eksekutor. Namun, mereka butuh lebih dari sekadar kafein; mereka butuh lingkungan yang mendukung alur kerja mereka, dari baris kode pertama hingga peluncuran produk.
+                        <br><br>
+                        Karena itu, kami terobsesi pada tiga hal. <strong>Kopi</strong> kami adalah tentang kualitas tanpa kompromi untuk performa puncak. Ruang kami (<strong>Kode</strong>) dirancang untuk fokus dan kolaborasi yang produktif. Dan komunitas kami adalah tempat <strong>Kreativitas</strong> bertemu, berpadu, dan berkembang menjadi sesuatu yang nyata.
+                        <br><br>
+                        Selamat datang di markas Anda. Mari ciptakan sesuatu yang luar biasa, bersama-sama.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Kontak -->
+        <section id="kontak" class="kontak-section">
+            <div class="container">
+                <h2>Kunjungi Kami</h2>
+                <div class="kontak-info">
+                    <p><strong>Alamat:</strong> Jl. Koding No. 123, Jakarta, Indonesia</p>
+                    <p><strong>Jam Buka:</strong> Senin - Minggu, 08:00 - 23:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kopi Koding</p>
+    </footer>
+
+    <!-- Import Map untuk Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
